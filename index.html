@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="鷲頭希理が初めて作ったポートフォリオです。自己紹介や使えるプログラミング言語などを見ることができます。">
+  <title>WashikiriPortfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+          integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+          crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a class="js-smooth-scroll" href="#main-image">Home</a></li>
+        <li><a class="js-smooth-scroll" href="#aboutme">About</a></li>
+        <li><a class="js-smooth-scroll" href="#webskills">Skills</a></li>
+        <li><a class="js-smooth-scroll" href="#works">Works</a></li>
+        <!-- <li><a href="#">Contact</a></li> -->
+      </ul>
+    </nav>
+  </header>
+  <div id="main-image">
+    <div class="main-title">
+      <h1>Kiri Washizu</h1>
+      <p>20 years old</p>
+      <p>プログラマー、Webエンジニア志望</p>
+    </div>
+  </div>
+
+  <main>
+    <section id="aboutme">
+      <div class="wrapper flex">
+        <img class="aboutme-image" src="images/aboutme.jpeg" alt="">
+        <div class="aboutme-details">
+          <h2>自己紹介</h2>
+          <p>鷲頭希理（わしずきり）</p>
+          <p>1999年生まれ、札幌市出身。北海道大学法学部卒業予定</p>
+          <p>2020年5月に初めてプログラミングに触れ、それまでも関心のあったIT業界を志す。</p>
+          <p>興味を持ったことはやらなきゃ気が済まない。新しいものが大好き</p>
+          <p>幅広く知識を身に付け、何でも屋を目指します！</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="webskills">
+      <h2>学習経験のある言語</h2>
+      <div class="skills flex">
+        <div class="skill">
+          <h3>HTML5/CSS3</h3>
+          <i class="fas fa-code fa-4x code"></i>
+          <p>見やすいコードを心がけます。レスポンシブデザインも可能です。</p>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <i class="fab fa-js fa-4x js"></i>
+          <p>サイトに動きを与えることも可能です。</p>
+        </div>
+        <div class="skill">
+          <h3>Ruby(Rails5)</h3>
+          <i class="far fa-gem fa-4x ruby"></i>
+          <p>人気のフレームワークを使用し、Webサービスを構築します。</p>
+        </div>
+        <div class="skill">
+          <h3>PHP</h3>
+          <i class="fab fa-php fa-4x php"></i>
+          <p>Webサービスに必要なフォームや会員管理などを構築します。</p>
+        </div>
+      </div>
+    </section>
+    <section id="works">
+      <div class="works-description">
+        <h2>作品・ポートフォリオ</h2>
+        <p>過去に制作したものです。</p>
+      </div>
+      <div class="works-gallery flex">
+        <div class="work">
+          <a href="#">
+            <img src="https://via.placeholder.com/240x150" alt="">
+            <p>模写作品</p>
+          </a>
+        </div>
+        <div class="work">
+          <a href="#">
+            <img src="https://via.placeholder.com/240x150" alt="">
+            <p>模写作品</p>
+          </a>
+        </div>
+        <div class="work">
+          <a href="#">
+            <img src="https://via.placeholder.com/240x150" alt="">
+            <p>模写作品</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2020 Kiri Washizu</small></p>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

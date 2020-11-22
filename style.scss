@@ -1,0 +1,248 @@
+// 変数定義
+$mainFontColor: #4C2E30;
+$subFontColor: #eee;
+$subTitleBorder: rgb(121, 184, 113);
+
+// メディアクエリ設定
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+// 基本設定
+body {
+  margin: 0;
+  font-family: "Helvetica Neue",
+                    Arial,
+                    "Hiragino Kaku Gothic ProN",
+                    "Hiragino Sans",
+                    Meiryo,
+                    sans-serif; 
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  color: $mainFontColor;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+// ヘッダーナビゲーション
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+nav {
+  float: right;
+  margin-right: 10px;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-right: 10px;
+      a {
+        text-decoration: none;
+        color: $mainFontColor;
+      }
+    }
+  }
+}
+
+// メインビジュアル
+#main-image {
+  background-image: url("images/myPicture.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+
+.main-title {
+  text-align: center;
+  h1 {
+    display: inline-block;
+    font-size: 50px;
+    border-bottom: 8px solid rgb(159, 225, 255);
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+}
+
+// 自己紹介
+#aboutme {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 30px;
+}
+
+.aboutme-image {
+  width: 25%;
+  // float: left;
+  @include tab {
+    width: 50%;
+    margin: 0 25%;
+  }
+}
+
+.aboutme-details {
+  width: 55%;
+  margin:10% 5%;
+  h2 {
+    display: inline;
+    border-bottom: 5px solid $subTitleBorder;
+  }
+  @include tab {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+// 学習経験のある言語
+#webskills {
+  background-image: url('images/webskills.jpg');
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  h2 {
+    color: $subFontColor;
+    margin-bottom: 50px;
+    display: inline-block;
+    border-bottom: 5px solid $subTitleBorder;
+  }
+}
+
+.skills {
+  padding: 0 5%;
+}
+
+.skill {
+  width: 22%;
+  margin-right: 4%;
+  @include tab {
+    width: 45%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  };
+  @include sp {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 60px;
+  };
+  h3 {
+    color: $subFontColor;
+    font-size: 25px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $subFontColor;
+    margin-top: 20px;
+  }
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+}
+
+// ロゴの色指定
+.code {color: orange;}
+.js {color: lightgreen;}
+.ruby {color: red;}
+.php {color: lightsteelblue}
+
+// 作品・ポートフォリオ
+#works {
+  text-align: center;
+  padding: 100px 0;
+}
+
+
+.works-description {
+  h2 {
+    margin-bottom: 20px;
+    display: inline-block;
+    border-bottom: 5px solid $subTitleBorder;
+  }
+}
+
+.works-gallery {
+  margin: 50px 5%;
+}
+
+.work {
+  position: relative;
+  width: 30%;
+  margin-right: 5%;
+  img {
+    width: 100%;
+  }
+  p {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: $subFontColor;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  @include tab {
+    width: 45%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+  @include sp {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+}
+
+// フッター
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: $mainFontColor;
+  p {
+    color: $subFontColor;
+  }
+}
