@@ -1,12 +1,13 @@
 // スクロールによる背景横移動
-$(window).on("scroll", function() {
-  var scrollTop = $(window).scrollTop();
-  var bgPosition = scrollTop / 4;
+window.addEventListener("scroll", () => {
+  const scrolltop = window.pageYOffset;
+  const bgPosition = scrolltop / 4;
+  const webskills = document.getElementById('webskills');
 
-  if(bgPosition) {
-    $("#webskills").css("background-position", "center left -" + bgPosition + "px");
+  if (bgPosition) {
+    webskills.style.backgroundPosition = `center left -${bgPosition}px`;
   }
-})
+});
 
 // ページ内リンクのスムーズスクロール
 document.addEventListener("click", e => {
