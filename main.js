@@ -1,5 +1,7 @@
+'use strict';
+
 // スクロールによる背景横移動
-window.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   const scrolltop = window.pageYOffset;
   const bgPosition = scrolltop / 4;
   const webskills = document.getElementById('webskills');
